@@ -21,8 +21,7 @@ swpun = 0
 words = 0
 # Количество предложений
 offers = 0
-# Просто переменная)
-i = 0
+
 
 with open("aristotle.txt", "rt") as text:
     data = text.read()
