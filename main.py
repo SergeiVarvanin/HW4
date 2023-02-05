@@ -28,14 +28,9 @@ with open("aristotle.txt", "rt") as text:
     data = text.read()
     symbols = len(data)
     swpro = symbols - data.count(' ')
-    i = re.sub(r'[^\w\s]', '', data)
-    swpun = len(i)
-    i = 0
-    i = re.split(r'[,\s]\s*', data)
-    words = len(i)
-    i = 0
-    i = re.sub(r'[.!?]\s', r'|', data)
-    offers = len(i.split('|'))
+    swpun = len(re.sub(r'[^\w\s]', '', data))
+    words = len(re.split(r'[,\s]\s*', data))
+    offers = len(re.sub(r'[.!?]\s', r'|', data).split('|'))
 
 
 print('Количество символов в тексте: ', symbols)
